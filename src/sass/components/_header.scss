@@ -1,0 +1,39 @@
+.wrapper {
+    max-width: 1200px;
+}
+
+.header {
+    width: 100%;
+    margin-top: 15px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    &__hamburger {
+        margin-right: 37px;
+        color: red;
+        @include media-mobile {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &__buttons {
+        >.button {
+            margin-left: 14px;
+            &:first-child {
+                margin-left: 14px;
+                margin-left: 0;
+            }
+        }
+        @include media-mobile {
+            display: none;
+        }
+    }
+
+}
