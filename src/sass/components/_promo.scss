@@ -1,44 +1,103 @@
 .promo {
-    &__wrapper {
-        width: 85%;
-        margin: 3%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
+    display: flex;
+}
 
-        @include media-tablet {
-            flex-direction: row;
-        }
+.promo__wrapper {
+    width: 85%;
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    @include media-tablet {
+        flex-direction: row;
+        justify-content: space-between;
     }
+}
 
-    &__title {
-        font-size: 2.2em;
-        letter-spacing: 1px;
-        line-height: 36px;
-        margin: 10px 5px;
-        color: $primary-color;
-        font-weight: 600;
+.promo__title {
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    line-height: 40px;
+    margin: 10px 5px;
+    color: $primary-color;
+    font-weight: 600;
 
-        @include media-tablet {
-            font-size: 2.6rem;
-        }
+    @include media-tablet {
+        margin-left: 30px;
+        font-size: 2.6rem;
     }
+}
 
-    &__text {
-        font-size: 0.8em;
-        margin: 10px 5px;
-        letter-spacing: 0px;
-        line-height: 20px;
-        color: #6e757a;
-        font-weight: 400;
+.promo__text {
+    font-size: 0.8em;
+    margin: 10px 5px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    color: #6e757a;
+    font-weight: 400;
+
+    @include media-tablet {
+        margin-left: 30px;
     }
+}
 
-    &__img {
-        max-width: 660px;
-        max-height: 680px;
-        width: 30%;
-        height: 30%;
-    }   
+.promo__img {
+    max-width: 660px;
+    max-height: 680px;
+    width: 50%;
+    height: 50%;
+    margin: 0 10px;
+
+    @include media-tablet {
+        width: 40vw;
+    }
+}
+
+.promo__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include media-tablet {
+        justify-content: flex-start;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+}
+
+.promo_slide {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.button_colored {
+    @include button-colored;
+}
+
+.button_white {
+    width: 50%;
+    margin: 0 auto;
+    @include button-white ($primary-color);
+
+    &:hover {
+        cursor: pointer;
+        @include button-white ($secondary-color);
+    }
+}
+
+.slick-arrow {
+    background-color: linear-gradient(rgba(255, 255, 255, 0.027), rgba(255, 255, 255, 0.014));
+    border: 1px solid transparent;
+    color: $primary-color;
+    font-size: 40px;
+
+    &:hover {
+        cursor: pointer;
+        color: $secondary-color;
+    }
 }

@@ -1,0 +1,120 @@
+.contact-us {
+    margin-bottom: 40px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        
+        
+        @include media-tablet {
+            margin-left: 30px;
+            padding-left: 30px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 21px;
+        color: $secondary-color;
+        font-weight: 600;
+
+        @include media-tablet {
+            margin-left: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        letter-spacing: 0px;
+        line-height: 60px;
+        color: $primary-color;
+        font-weight: 600;
+        margin: 10px 0;
+
+        @include media-tablet {
+            font-size: 48px;
+            margin-left: 30px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: 97%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    input {
+        border: 1px solid #F4FAFE;
+        background-color: #F4FAFE;
+        width: 96%;
+        padding: 10px 21px;
+        margin-bottom: 19px;
+        margin-right: 5px;
+
+        &:focus {
+            border-color: $primary-color;
+            outline: none;
+        }
+
+        @include placeholder {
+            font-size: 18px;
+            letter-spacing: 0px;
+            line-height: 21px;
+            color: $primary-color;
+            font-weight: 600;
+        }
+
+        @include media-tablet {
+            display: flex;
+            flex-direction: row;
+            width: 93%;
+            margin-right: 5px;
+            max-width: 1173px;
+        }
+    }
+
+    textarea {
+        resize: none;
+        height: 160px;
+        border: 1px solid #F4FAFE;
+        background-color: #F4FAFE;
+        padding: 10px 21px;
+        margin-bottom: 19px;
+        margin-right: 5px;
+        width: 96%;
+
+        @include placeholder {
+            font-size: 18px;
+            letter-spacing: 0px;
+            line-height: 21px;
+            color: $primary-color;
+            font-weight: 600;
+            font-family: "Work Sans";
+        }
+
+        @include media-tablet {
+            display: flex;
+            flex-direction: row;
+            width: 93%;
+            margin-right: 5px;
+            max-width: 1173px;
+        }
+    }
+
+    &__button {
+        @include button-colored;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+            color: $primary-color;
+        }
+    }
+}

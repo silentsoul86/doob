@@ -30,3 +30,44 @@
         @content;
     }
   }
+
+
+  @mixin button-colored {
+    width: 200px;
+    height: 55px;
+    border-radius: 25px;
+    border: 1px solid $secondary-color;
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 400;
+    margin: 5px;
+
+    &:hover {
+      border-color: #fff;
+      background-color: #fff;
+      color: $secondary-color;
+    }
+  }
+
+  @mixin button-white($color) {
+    width: 200px;
+    height: 55px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 21px;
+    color: $color;
+    font-weight: 600;
+    margin: 5px;
+  }
+
+  @mixin placeholder {
+    &::-webkit-input-placeholder { @content; }
+    &:-moz-placeholder           { @content; }
+    &::-moz-placeholder          { @content; }
+    &:-ms-input-placeholder      { @content; }  
+  }

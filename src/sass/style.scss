@@ -3,5 +3,13 @@
 @import './abstract/mixins';
 @import './components/header';
 @import './components/navigation';
-@import './abstract/placeholders';
 @import './components/promo';
+@import './components/portfolio';
+@import './components/contact-us';
+@import './components/footer';
+
+.wrapper {
+    width: 96%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
