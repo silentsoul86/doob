@@ -1,3 +1,5 @@
+import './sass/style.scss';
+
 document.getElementById("trigger").onclick = function() {
     open()
 };
